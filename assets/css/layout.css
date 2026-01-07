@@ -1,14 +1,18 @@
+/* =========================
+LAYOUT GLOBAL
+========================= */
+
 .topnav {
-  height:64px;
-  background:var(--card);
-  border-bottom:1px solid #e5e7eb;
-  display:flex;
-  align-items:center;
-  padding:0 24px;
+  height: 64px;
+  background: var(--card);
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
 }
 
 .container {
-  max-width:1280px;
-  margin:32px auto;
-  padding:0 20px;
+  max-width: 1280px;
+  margin: 32px auto;
+  padding: 0 20px;
 }

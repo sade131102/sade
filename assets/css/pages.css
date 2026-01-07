@@ -1,251 +1,344 @@
 /* ======================================================
-SADE – PÁGINAS (pages.css)
-Responsabilidade:
-- Menu de entidades
-- CRUD (listar, cadastrar, editar, excluir)
-- Tipografia
+PAGES – COMPORTAMENTO POR PÁGINA / MÓDULO
 ====================================================== */
 
-/* ======================================================
-TÍTULOS DAS PÁGINAS
-====================================================== */
+/* TÍTULOS DAS PÁGINAS */
 .titulo-central {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 6px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .subtitulo-central {
-    text-align: center;
-    color: #6b7280;
-    margin-bottom: 32px;
-    font-size: 15px;
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 32px;
+  font-size: 15px;
 }
 
-/* ======================================================
-BOTÕES – BASE
-====================================================== */
+/* BOTÕES – BASE */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: background-color .2s ease;
-    margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background-color .2s ease;
 }
 
-/* ======================================================
-BOTÕES – VARIAÇÕES
-====================================================== */
+/* BOTÕES – VARIAÇÕES */
 .btn-cadastrar { background: #16a34a; color: #fff; }
 .btn-cadastrar:hover { background: #15803d; }
 
-.btn-listar { background: #2563eb; color: #fff; }
+.btn-listar { background: var(--primary); color: #fff; }
 .btn-listar:hover { background: #1e40af; }
 
 .btn-editar { background: #f59e0b; color: #fff; }
 .btn-editar:hover { background: #d97706; }
 
-.btn-excluir { background: #dc2626; color: #fff; }
+.btn-excluir { background: var(--danger); color: #fff; }
 .btn-excluir:hover { background: #b91c1c; }
 
-/* ======================================================
-LAYOUT CENTRAL DAS PÁGINAS
-====================================================== */
+/* LAYOUT CENTRAL DAS PÁGINAS */
 .page-central {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* ======================================================
-MENU DE ENTIDADES (Estudos, Projetos, etc.)
-====================================================== */
+/* MENU DE ENTIDADES */
 .cards-acoes {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .card-acao {
-    background: #fff;
-    border-radius: 22px;
-    padding: 32px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+  background: var(--card);
+  border-radius: 22px;
+  padding: 32px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
 }
 
 .card-acao h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .card-acao p {
-    font-size: 14px;
-    color: #6b7280;
+  font-size: 14px;
+  color: var(--muted);
 }
 
-/* ======================================================
-CRUD – CARD BASE
-====================================================== */
+/* CRUD – CARD BASE */
 .card-crud {
-    background: #fff;
-    border-radius: 18px;
-    padding: 28px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.06);
-    margin-bottom: 24px;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 14px;
-    color: #111827;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+  font-size: 14px;
 }
 
-/* ======================================================
-CRUD – AÇÕES NO TOPO
-====================================================== */
+/* CRUD – AÇÕES TOPO */
 .acoes-topo {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 16px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
-/* ======================================================
-CRUD – TABELAS (LISTAR)
-====================================================== */
+/* CRUD – TABELAS */
 .tabela {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
 }
 
 .tabela thead th {
-    text-align: left;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    color: #6b7280;
-    padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+  padding: 12px 16px;
 }
 
 .tabela tbody tr {
-    background: #f9fafb;
+  background: #f9fafb;
 }
 
 .tabela tbody td {
-    padding: 16px;
-    font-size: 14px;
+  padding: 16px;
+  font-size: 14px;
 }
 
 .tabela tbody tr td:first-child {
-    border-radius: 12px 0 0 12px;
+  border-radius: 12px 0 0 12px;
 }
 
 .tabela tbody tr td:last-child {
-    border-radius: 0 12px 12px 0;
+  border-radius: 0 12px 12px 0;
 }
 
-/* ======================================================
-CRUD – AÇÕES (Editar / Excluir)
-====================================================== */
+/* CRUD – AÇÕES */
 .acoes {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .btn-acao {
-    padding: 6px 12px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
 }
 
-.btn-acao.editar {
-    background: #f59e0b;
-}
+.btn-acao.editar { background: #f59e0b; }
+.btn-acao.excluir { background: var(--danger); }
 
-.btn-acao.excluir {
-    background: #dc2626;
-}
-
-/* ======================================================
-CRUD – FORMULÁRIOS E FILTROS
-====================================================== */
+/* FORMULÁRIOS */
 .formulario {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Labels padrão (inclusive filtros de relatório) */
 .card-crud label {
-    display: block;
-    font-weight: 600;
-    font-size: 13px;
-    color: #374151;
-    margin-bottom: 6px;
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
-/* Inputs, selects e datas padronizados */
 .card-crud input,
 .card-crud select,
 .card-crud textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #d1d5db;
-    font-size: 14px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Roboto, Arial, sans-serif;
-    color: #111827;
-    background-color: #fff;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
 }
 
-/* Ajuste específico para input[type="date"] */
-.card-crud input[type="date"] {
-    line-height: 1.2;
-}
-
-/* Grids */
+/* GRIDS */
 .linha {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .acoes-form {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-/* ======================================================
-RESPONSIVO
-====================================================== */
+/* DASHBOARD – VIDA ACADÊMICA */
+.page-dashboard .dashboard-section {
+  margin-top: 4rem;
+}
+
+.page-dashboard .dashboard-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .linha {
-        grid-template-columns: 1fr;
-    }
+  .linha {
+    grid-template-columns: 1fr;
+  }
 
-    .acoes {
-        flex-direction: column;
-    }
+  .acoes {
+    flex-direction: column;
+  }
 
-    .acoes-topo {
-        flex-wrap: wrap;
-        align-items: stretch;
-    }
+  .acoes-topo {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
+/* INDICADORES – DASHBOARD */
+.cards-indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+.card.indicador {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.card.indicador h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.card.indicador p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.page-dashboard .dashboard-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.page-dashboard .dashboard-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+.page-dashboard .dashboard-section + .dashboard-section {
+  margin-top: 5rem;
+}
+.card-acao {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-acao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* ESPAÇAMENTO NOS CARDS DE AÇÃO */
+.card-acao p {
+  margin-bottom: 20px;
+}
+
+.card-acao .btn {
+  margin-top: 8px;
+}
+
+/* =========================
+DASHBOARD – VIDA ACADÊMICA
+========================= */
+
+/* SEÇÕES DO DASHBOARD */
+.page-dashboard .dashboard-section {
+  margin-top: 4rem;
+}
+
+.page-dashboard .dashboard-section + .dashboard-section {
+  margin-top: 5rem;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+.page-dashboard .dashboard-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.page-dashboard .dashboard-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================
+INDICADORES – DASHBOARD (CIRCULAR)
+========================= */
+
+.page-dashboard .cards {
+  margin-top: 3rem;
+  justify-items: center;
+}
+
+/* Card circular */
+.page-dashboard .cards .card {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  padding: 0; /* ESSENCIAL */
+}
+
+/* Número */
+.page-dashboard .cards .card h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary);
+}
+
+/* Texto */
+.page-dashboard .cards .card p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  max-width: 120px;
 }
