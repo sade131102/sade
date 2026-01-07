@@ -2,7 +2,7 @@
 $titulo = 'Editar Disciplina';
 $pagina = 'page-form';
 
-require "../../templates/auth.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 require "../../../config/db.php";
 require "../../../app/Services/DisciplinaService.php";
 require "../../../app/Services/CursoService.php";

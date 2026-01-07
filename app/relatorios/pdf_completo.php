@@ -1,8 +1,7 @@
 <?php
 
 require __DIR__ . "/../../libs/dompdf/vendor/autoload.php";
-require __DIR__ . "/../templates/auth.php";
-require __DIR__ . "/../../config/db.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 use Dompdf\Dompdf;
 use Dompdf\Options;

@@ -2,7 +2,7 @@
 $titulo = 'Cadastrar Curso';
 $pagina = 'page-form';
 
-require "../../templates/auth.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 ob_start();
 ?>

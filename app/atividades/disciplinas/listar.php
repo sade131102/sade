@@ -2,9 +2,7 @@
 $titulo = 'Disciplinas';
 $pagina = 'page-list';
 
-require "../../templates/auth.php";
-require "../../../config/db.php";
-require "../../../app/Services/DisciplinaService.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 $service = new DisciplinaService($pdo);
 $disciplinas = $service->listar();

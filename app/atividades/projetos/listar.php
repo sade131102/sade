@@ -2,8 +2,7 @@
 $titulo = 'Projetos';
 $pagina = 'page-list';
 
-require "../../templates/auth.php";
-require "../../../config/db.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 require "../../../app/Services/ProjetoService.php";
 
 $service = new ProjetoService($pdo);

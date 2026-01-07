@@ -2,9 +2,7 @@
 $titulo = 'Cursos';
 $pagina = 'page-list';
 
-require "../../templates/auth.php";
-require "../../../config/db.php";
-require "../../../app/Services/CursoService.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 $service = new CursoService($pdo);
 $cursos = $service->listar();

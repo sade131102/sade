@@ -2,7 +2,7 @@
 $titulo = 'Cadastrar Disciplina';
 $pagina = 'page-form';
 
-require "../../templates/auth.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 ob_start();
 ?>
@@ -11,9 +11,7 @@ ob_start();
 $titulo = 'Cadastrar Disciplina';
 $pagina = 'page-form';
 
-require "../../templates/auth.php";
-require "../../../config/db.php";
-require "../../../app/Services/CursoService.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 $cursoService = new CursoService($pdo);
 $cursos = $cursoService->listar();
