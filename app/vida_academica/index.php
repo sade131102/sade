@@ -44,21 +44,25 @@ ob_start();
     <div class="cards">
 
       <div class="card">
-        <h3><?= $totalEstudos ?></h3>
+         <span class="icon">📘</span>
+		 <h3><?= $totalEstudos ?></h3>
         <p>Registros de Estudo</p>
       </div>
 
       <div class="card">
+	    <span class="icon">⏱️</span>
         <h3><?= number_format($totalHoras, 1, ',', '.') ?> h</h3>
         <p>Horas Estudadas</p>
       </div>
 
       <div class="card">
+	    <span class="icon">🎓</span>
         <h3><?= $totalCursos ?></h3>
         <p>Cursos</p>
       </div>
 
       <div class="card">
+	    <span class="icon">📚</span>
         <h3><?= $totalDisciplinas ?></h3>
         <p>Disciplinas</p>
       </div>

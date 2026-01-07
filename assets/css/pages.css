@@ -342,3 +342,11 @@ INDICADORES – DASHBOARD (CIRCULAR)
   color: var(--muted);
   max-width: 120px;
 }
+/* ÍCONES DOS INDICADORES */
+.page-dashboard .cards .card .icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+  opacity: 0.9;
+}
+
