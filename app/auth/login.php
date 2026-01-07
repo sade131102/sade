@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "../../config/db.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 $erro = "";
 

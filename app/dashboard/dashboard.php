@@ -75,4 +75,4 @@ new Chart(ctx, {
 </script>
 ';
 
-include __DIR__ . "/../templates/template.php";
+require_once APP_ROOT . '/app/templates/template.php';

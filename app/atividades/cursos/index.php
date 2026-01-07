@@ -38,4 +38,4 @@ ob_start();
 
 <?php
 $conteudo = ob_get_clean();
-include "../../templates/template.php";
+require_once APP_ROOT . '/app/templates/template.php';

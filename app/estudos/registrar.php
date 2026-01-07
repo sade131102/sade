@@ -2,9 +2,8 @@
 $titulo = 'Registrar Horas de Estudo';
 $pagina = 'page-form';
 
-require "../templates/auth.php";
-require "../../config/db.php";
-require "../../app/Services/DisciplinaService.php";
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 require "../../app/Services/ProjetoService.php";
 require "../../app/Services/EstudoService.php";
 
@@ -109,4 +108,4 @@ ob_start();
 
 <?php
 $conteudo = ob_get_clean();
-include "../templates/template.php";
+require_once APP_ROOT . '/app/templates/template.php';

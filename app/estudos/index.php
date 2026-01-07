@@ -2,7 +2,7 @@
 $titulo = 'Estudos';
 $pagina = 'page-entity';
 
-require __DIR__ . "/../templates/auth.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 
 ob_start();
 ?>
@@ -29,7 +29,7 @@ ob_start();
     <div class="card-acao">
       <h3>Registros</h3>
       <p>Visualizar histórico de estudos</p>
-      <a href="registros.php" class="btn btn-listar">Ver Registros</a>
+      <a href="listar.php" class="btn btn-listar">Ver Registros</a>
     </div>
 
   </div>
@@ -37,4 +37,4 @@ ob_start();
 
 <?php
 $conteudo = ob_get_clean();
-include __DIR__ . "/../templates/template.php";
+require_once APP_ROOT . '/app/templates/template.php';
