@@ -12,7 +12,7 @@ if ($_POST) {
     if ($u && password_verify($_POST['senha'], $u['senha'])) {
         $_SESSION['usuario_id'] = $u['id'];
         $_SESSION['usuario_nome'] = $u['nome'];
-		header("Location: /controle_estudos/app/dashboard/dashboard.php");
+		header("Location: /controle_estudos/app/dashboard/boas_vindas.php");
         exit;
     }
     $erro = "Login inválido";

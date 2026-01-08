@@ -415,3 +415,66 @@ INDICADORES – DASHBOARD (CIRCULAR)
 .mod-religiosa .card-acao .btn.btn-listar:hover {
   background: #15803d;
 }
+
+/* =========================
+TELA DE BOAS-VINDAS – SGP
+========================= */
+
+.welcome {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.welcome-logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  max-width: 600px;
+  margin: 20px auto 40px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+/* Cards dos módulos */
+.welcome-modulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.welcome-card {
+  padding: 26px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+/* Cores dos módulos */
+.welcome-card.pessoal {
+  background: var(--vermelho);
+}
+
+.welcome-card.profissional {
+  background: var(--amarelo);
+}
+
+.welcome-card.academica {
+  background: var(--azul);
+}
+
+.welcome-card.religiosa {
+  background: var(--verde);
+}
