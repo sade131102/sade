@@ -10,7 +10,12 @@ BASE – FUNDAÇÃO GLOBAL
   --muted: #6b7280;
   --danger: #dc2626;
   --radius: 14px;
+  --azul: #2563eb;
+  --amarelo: #f59e0b;
+  --vermelho: #dc2626;
+  --verde: #16a34a;
 }
+
 
 * {
   margin: 0;

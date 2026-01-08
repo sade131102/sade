@@ -1,6 +1,7 @@
 <?php
 $titulo = 'Vida Profissional';
-$pagina = 'page-dashboard';
+$pagina = 'page-dashboard mod-profissional';
+
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 

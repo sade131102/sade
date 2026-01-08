@@ -1,6 +1,6 @@
 <?php
 $titulo = 'Vida Acadêmica';
-$pagina = 'page-dashboard';
+$pagina = 'page-dashboard mod-academica';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/bootstrap.php';
 

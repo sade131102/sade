@@ -350,3 +350,68 @@ INDICADORES – DASHBOARD (CIRCULAR)
   opacity: 0.9;
 }
 
+/* INDICADORES – CORES POR MÓDULO */
+.mod-academica .cards .card h3 {
+  color: var(--azul);
+}
+
+.mod-profissional .cards .card h3 {
+  color: var(--amarelo);
+}
+
+.mod-pessoal .cards .card h3 {
+  color: var(--vermelho);
+}
+
+.mod-religiosa .cards .card h3 {
+  color: var(--verde);
+}
+
+/* TÍTULOS – LINHA POR MÓDULO */
+.mod-academica .dashboard-title::after {
+  background: var(--azul);
+}
+
+.mod-profissional .dashboard-title::after {
+  background: var(--amarelo);
+}
+
+.mod-pessoal .dashboard-title::after {
+  background: var(--vermelho);
+}
+
+.mod-religiosa .dashboard-title::after {
+  background: var(--verde);
+}
+
+/* BOTÕES – CORES POR MÓDULO (ESPECIFICIDADE CORRETA) */
+.mod-profissional .card-acao .btn.btn-listar {
+  background: var(--amarelo);
+}
+
+.mod-academica .card-acao .btn.btn-listar {
+  background: var(--azul);
+}
+
+.mod-pessoal .card-acao .btn.btn-listar {
+  background: var(--vermelho);
+}
+
+.mod-religiosa .card-acao .btn.btn-listar {
+  background: var(--verde);
+}
+.mod-profissional .card-acao .btn.btn-listar:hover {
+  background: #d97706;
+}
+
+.mod-academica .card-acao .btn.btn-listar:hover {
+  background: #1e40af;
+}
+
+.mod-pessoal .card-acao .btn.btn-listar:hover {
+  background: #b91c1c;
+}
+
+.mod-religiosa .card-acao .btn.btn-listar:hover {
+  background: #15803d;
+}
