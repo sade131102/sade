@@ -14,8 +14,11 @@ BASE – FUNDAÇÃO GLOBAL
   --amarelo: #f59e0b;
   --vermelho: #dc2626;
   --verde: #16a34a;
+  --bg-login: #f8fafc;
+  --card-login: #ffffff;
+  --texto: #0f172a;
+  --muted: #64748b;
 }
-
 
 * {
   margin: 0;
