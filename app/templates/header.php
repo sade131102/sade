@@ -1,13 +1,25 @@
-<header class="topnav">
-  <div class="logo">SADE</div>
+<header class="topbar">
 
-  <nav class="menu">
-    <a href="/controle_estudos/app/dashboard/dashboard.php">Início</a>
+  <div class="topbar-left">
+    <img src="/controle_estudos/assets/img/sgp1.png" alt="SGP">
 
-    <a href="/controle_estudos/app/vida_pessoal/index.php">Vida Pessoal</a>
-    <a href="/controle_estudos/app/vida_profissional/index.php">Vida Profissional</a>
-    <a href="/controle_estudos/app/vida_academica/index.php">Vida Acadêmica</a>
-    <a href="/controle_estudos/app/vida_religiosa/index.php">Vida Religiosa</a>
-    <a href="/controle_estudos/app/auth/logout.php" class="sair">Sair</a>
+    <div class="topbar-title">
+      <strong>SGP</strong>
+      <span>Sistema de Gestão Pessoal</span>
+    </div>
+  </div>
+
+  <nav class="topbar-nav">
+    <a href="/controle_estudos/app/dashboard/boas_vindas.php">Início</a>
+    <a href="/controle_estudos/app/vida_pessoal/index.php" class="pessoal">Vida Pessoal</a>
+    <a href="/controle_estudos/app/vida_profissional/index.php" class="profissional">Vida Profissional</a>
+    <a href="/controle_estudos/app/vida_academica/index.php" class="academica">Vida Acadêmica</a>
+    <a href="/controle_estudos/app/vida_religiosa/index.php" class="religiosa">Vida Religiosa</a>
   </nav>
+
+  <div class="topbar-right">
+    <span><?= htmlspecialchars($_SESSION['usuario_nome'] ?? '') ?></span>
+    <a href="/controle_estudos/app/auth/logout.php">Sair</a>
+  </div>
+
 </header>

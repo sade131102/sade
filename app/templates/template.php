@@ -13,6 +13,7 @@ if (!isset($conteudo)) $conteudo = '';
   <link rel="stylesheet" href="/controle_estudos/assets/css/layout.css">
   <link rel="stylesheet" href="/controle_estudos/assets/css/components.css">
   <link rel="stylesheet" href="/controle_estudos/assets/css/pages.css">
+  <link rel="stylesheet" href="/controle_estudos/assets/css/header.css">
 </head>
 
 <body class="<?= htmlspecialchars($pagina) ?>">
