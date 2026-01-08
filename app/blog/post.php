@@ -48,7 +48,7 @@ if (!$post) {
   </div>
 
   <div class="blog-resumo">
-    <?= nl2br(htmlspecialchars($post['conteudo'])) ?>
+	<?= $post['conteudo'] ?>
   </div>
 
 </div>

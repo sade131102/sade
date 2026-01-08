@@ -9,6 +9,23 @@ ob_start();
 ?>
 
 <h1 class="titulo-central">Novo Post</h1>
+<script src="https://cdn.tiny.cloud/1/vjcir4eqrtlxfgk5h14rn7acdrkdiic6326newjju001sesd/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/vjcir4eqrtlxfgk5h14rn7acdrkdiic6326newjju001sesd/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+<script>
+  tinymce.init({
+    selector: 'textarea[name="conteudo"]',
+    height: 350,
+    menubar: false,
+    plugins: 'lists link code',
+    toolbar:
+      'undo redo | bold italic underline | bullist numlist | link | code',
+    content_style:
+      'body { font-family: Arial, sans-serif; font-size: 14px }'
+  });
+</script>
 
 <form method="post" action="salvar.php" class="card-crud formulario">
 
