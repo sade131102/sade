@@ -4,12 +4,10 @@
   <nav class="menu">
     <a href="/controle_estudos/app/dashboard/dashboard.php">Início</a>
 
-    <a href="/controle_estudos/app/estudos/index.php">Estudos</a>
-    <a href="/controle_estudos/app/atividades/disciplinas/index.php">Disciplinas</a>
-    <a href="/controle_estudos/app/atividades/cursos/index.php">Cursos</a>
-    <a href="/controle_estudos/app/atividades/projetos/index.php">Projetos</a>
-    <a href="/controle_estudos/app/relatorios/index.php">Relatórios</a>
-
+    <a href="/controle_estudos/app/vida_pessoal/index.php">Vida Pessoal</a>
+    <a href="/controle_estudos/app/vida_profissional/index.php">Vida Profissional</a>
+    <a href="/controle_estudos/app/vida_academica/index.php">Vida Acadêmica</a>
+    <a href="/controle_estudos/app/vida_religiosa/index.php">Vida Religiosa</a>
     <a href="/controle_estudos/app/auth/logout.php" class="sair">Sair</a>
   </nav>
 </header>

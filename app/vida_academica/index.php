@@ -99,7 +99,19 @@ ob_start();
         <p>Projetos acadêmicos</p>
         <a href="projetos/index.php" class="btn btn-listar">Acessar</a>
       </div>
-
+	  
+	  <div class="card-acao">
+	  <h3>Relatórios</h3>
+	  <p>Relatórios Acadêmicos</p>
+	  <a href="relatorios/index.php" class="btn btn-listar">Acessar</a>
+	  </div>
+	  
+      <div class="card-acao">
+	  <h3>Atividades</h3>
+	  <p>Atividades Complementares</p>
+	  <a href="relatorios/index.php" class="btn btn-listar">Acessar</a>
+	  </div>
+	  
     </div>
   </section>
 
