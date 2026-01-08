@@ -15,6 +15,8 @@
     <a href="/controle_estudos/app/vida_profissional/index.php" class="profissional">Vida Profissional</a>
     <a href="/controle_estudos/app/vida_academica/index.php" class="academica">Vida Acadêmica</a>
     <a href="/controle_estudos/app/vida_religiosa/index.php" class="religiosa">Vida Religiosa</a>
+	<a href="/controle_estudos/app/blog/index.php">Blog</a>
+
   </nav>
 
   <div class="topbar-right">

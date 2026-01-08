@@ -1,33 +1,40 @@
 <?php
-session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controle_estudos/config/db.php';
 
-$erro = "";
+session_start();
 
-if ($_POST) {
-    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email=?");
-    $sql->execute([$_POST['email']]);
-    $u = $sql->fetch();
+/* inicializa para evitar warning */
+$erro = '';
 
-    if ($u && password_verify($_POST['senha'], $u['senha'])) {
-        $_SESSION['usuario_id'] = $u['id'];
-        $_SESSION['usuario_nome'] = $u['nome'];
-		header("Location: /controle_estudos/app/dashboard/boas_vindas.php");
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+
+    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+    $stmt->execute([$email]);
+
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuario && password_verify($senha, $usuario['senha'])) {
+
+        $_SESSION['usuario_id']   = $usuario['id'];
+        $_SESSION['usuario_nome'] = $usuario['nome'];
+
+        header("Location: /controle_estudos/app/dashboard/boas_vindas.php");
         exit;
     }
-    $erro = "Login inválido";
+
+    $erro = 'Login inválido';
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
 
-  <!-- CSS base do sistema -->
   <link rel="stylesheet" href="/controle_estudos/assets/css/base.css">
-
-  <!-- CSS específico do login -->
   <link rel="stylesheet" href="/controle_estudos/assets/css/login.css">
 </head>
 <body>
@@ -41,10 +48,14 @@ if ($_POST) {
 
   <form method="post">
     <h2>Acesse o Sistema</h2>
-	<p><?= $erro ?></p>
-	<input name="email" type="email" placeholder="E-mail" required>
-	<input name="senha" type="password" placeholder="Senha" required>
-	<button>Entrar</button>
+
+    <?php if ($erro): ?>
+      <p class="erro"><?= htmlspecialchars($erro) ?></p>
+    <?php endif; ?>
+
+    <input name="email" type="email" placeholder="E-mail" required>
+    <input name="senha" type="password" placeholder="Senha" required>
+    <button type="submit">Entrar</button>
   </form>
 
 </div>

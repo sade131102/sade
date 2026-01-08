@@ -9,8 +9,7 @@ ob_start();
 ?>
 
 <h1 class="titulo-central">Novo Post</h1>
-<script src="https://cdn.tiny.cloud/1/vjcir4eqrtlxfgk5h14rn7acdrkdiic6326newjju001sesd/tinymce/6/tinymce.min.js"
-        referrerpolicy="origin"></script>
+
 <script src="https://cdn.tiny.cloud/1/vjcir4eqrtlxfgk5h14rn7acdrkdiic6326newjju001sesd/tinymce/6/tinymce.min.js"
         referrerpolicy="origin"></script>
 
@@ -20,20 +19,22 @@ ob_start();
     height: 350,
     menubar: false,
     plugins: 'lists link code',
-    toolbar:
-      'undo redo | bold italic underline | bullist numlist | link | code',
-    content_style:
-      'body { font-family: Arial, sans-serif; font-size: 14px }'
+    toolbar: 'undo redo | bold italic underline | bullist numlist | link | code',
+    setup: function (editor) {
+      editor.on('change', function () {
+        editor.save(); // 🔥 sincroniza com o textarea
+      });
+    }
   });
 </script>
 
-<form method="post" action="salvar.php" class="card-crud formulario">
+<form method="post" action="/controle_estudos/app/blog/admin/salvar.php">
 
   <label>Título</label>
-  <input name="titulo" required>
+  <input type="text" name="titulo" required>
 
   <label>Autor</label>
-  <input name="autor" required>
+  <input type="text" name="autor" required>
 
   <label>Categoria</label>
   <select name="categoria" required>
@@ -44,7 +45,7 @@ ob_start();
   </select>
 
   <label>Imagem destacada (nome do arquivo)</label>
-  <input name="imagem">
+  <input type="text" name="imagem">
 
   <label>Conteúdo</label>
   <textarea name="conteudo" rows="10" required></textarea>
@@ -56,7 +57,7 @@ ob_start();
   </select>
 
   <div class="acoes-form">
-    <button class="btn btn-cadastrar">Salvar</button>
+    <button type="submit" class="btn btn-cadastrar">Salvar</button>
   </div>
 
 </form>

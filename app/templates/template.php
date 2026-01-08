@@ -20,10 +20,11 @@ if (!isset($conteudo)) $conteudo = '';
 
   <?php include __DIR__ . '/header.php'; ?>
 
-<main class="container">
-  <div class="page-wrapper">
-    <?= $conteudo ?>
-  </div>
-</main>
+  <main class="container">
+    <div class="page-wrapper">
+      <?= $conteudo ?>
+    </div>
+  </main>
+
 </body>
 </html>

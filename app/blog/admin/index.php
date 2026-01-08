@@ -42,9 +42,20 @@ ob_start();
           ? date('d/m/Y H:i', strtotime($post['publicado_em']))
           : '-' ?>
       </td>
-      <td class="acoes">
-        <a href="editar.php?id=<?= $post['id'] ?>" class="btn-acao editar">Editar</a>
-      </td>
+      
+	  <td class="acoes">
+	  <a href="editar.php?id=<?= $post['id'] ?>" class="btn btn-editar">Editar</a>
+	  <form method="post"
+        action="excluir.php"
+        style="display:inline;"
+        onsubmit="return confirm('Tem certeza que deseja excluir este post?');">
+		<input type="hidden" name="id" value="<?= $post['id'] ?>">
+		<button type="submit" class="btn btn-excluir">Excluir</button>
+	  </form>
+
+</td>
+
+
     </tr>
   <?php endforeach; ?>
 
